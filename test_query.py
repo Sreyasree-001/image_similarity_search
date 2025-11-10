@@ -53,9 +53,9 @@ def main():
     # ---------------------
     # CONFIG
     # ---------------------
-    MODEL_PATH = "model/resnet50_finetuned.pth"
-    EMB_PATH = "embeddings/train_embeddings.npy"
-    IMG_PATHS_PATH = "embeddings/train_image_paths.npy"
+    MODEL_PATH = "model/resnet50_finetuned_20epochs.pth"
+    EMB_PATH = "embeddings_20epochs/train_embeddings.npy"
+    IMG_PATHS_PATH = "embeddings_20epochs/train_image_paths.npy"
     DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
     # ---------------------
@@ -81,7 +81,7 @@ def main():
     # ---------------------
     # LOAD QUERY IMAGE
     # ---------------------
-    query_path = "test4.jpg"  # your uploaded image
+    query_path = "test7.jpg"  # your uploaded image
     image = Image.open(query_path).convert("RGB")
     img_tensor = transform(image).unsqueeze(0).to(DEVICE)
 

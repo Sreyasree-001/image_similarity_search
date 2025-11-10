@@ -58,8 +58,8 @@ def extract_embeddings():
 
     # === CONFIG ===
     DATA_DIR = "data/caltech101/101_ObjectCategories"
-    MODEL_PATH = "model/resnet50_finetuned.pth"
-    SAVE_DIR = "embeddings"
+    MODEL_PATH = "model/resnet50_finetuned_20epochs.pth"
+    SAVE_DIR = "embeddings_20epochs"
     os.makedirs(SAVE_DIR, exist_ok=True)
 
     # === LOAD MODEL ===
